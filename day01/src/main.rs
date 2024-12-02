@@ -38,7 +38,7 @@ fn parse_number_pairs(input: &str) -> (Vec<i32>, Vec<i32>) {
     (left_numbers, right_numbers)
 }
 
-fn task_1(input: &String) -> i32 {
+fn task_1(input: &str) -> i32 {
     let (mut left_numbers, mut right_numbers) = parse_number_pairs(input);
     left_numbers.sort_unstable();
     right_numbers.sort_unstable();
@@ -53,7 +53,7 @@ fn task_1(input: &String) -> i32 {
     delta_sum
 }
 
-fn task_2(input: &String) -> i32 {
+fn task_2(input: &str) -> i32 {
     let (left_numbers, right_numbers) = parse_number_pairs(input);
 
     let mut right_numbers_map = std::collections::HashMap::new();
@@ -68,6 +68,5 @@ fn task_2(input: &String) -> i32 {
         }
     }
 
-
-    return sim_sum;
+    sim_sum
 }
